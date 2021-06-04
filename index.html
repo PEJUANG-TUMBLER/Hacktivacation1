@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacktivacation - your partner journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./_Assets/style/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+   
+</head>
+
+<body>
+    <div id="banner">
+        <div class="container">
+            <nav class="navbar navbar-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <i class="bi bi-twitter text-white fs16" style="margin-right: 20px;"></i>
+                        <i class="bi bi-facebook text-white fs16"></i>
+                    </a>
+                    <span class="navbar-brand">
+                        <a href="./wishlist.html" >
+                            <i class="bi bi-cart-check-fill text-primary" style="font-size: 60px;;"></i>
+                        </a>
+                    </span>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col-8">
+                    <div class="bannerBox">
+                        <img src="./_Assets/logo1.png" alt="" width="40%" id="logoImg">
+                        <h1 class="text-focus-in">Get your Freedom</h1>
+                        <h1 class="text-focus-in">One App for all needs.</h1>
+                        <p class="text-white">
+                            we accompany you to discover new stories of your journey
+                        </p>
+                        <a href="#data">
+                            <button class="btn btn-primary startHere">
+                                <i class="bi bi-cursor-fill" style="margin-right: 10px"></i>
+                                Start Here
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div id="sideBanner">
+                        <div class="boxSide">
+                            <p style="background-color: yellow;padding: 10px;"><i class="bi bi-geo-alt-fill"></i> Grand Canyon - Bogor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="destination">
+        <div class="container">
+            <div id="promo">
+                <h3>Promo is running <small><em>until 24 August 2021</em></small> </h3>
+                <p>max 5 person</p>
+                <p>tag our official fanspage in your ig</p>
+                <p>meet point at Jakarta</p>
+                <br>
+                <div class="card" style="width: 15rem; display: inline-block;margin-right: 40px;border-radius: 10px; margin-bottom: 50px;">
+                    <img class="card-img-top bRadius"
+                        src="https://i.pinimg.com/originals/46/7f/fe/467ffedf6f9f9cdbd767054c25973f40.jpg"
+                        alt="Card image cap">
+                    <div class="card-body text-white" style="background-color: #68bd45;">
+                        <p class="card-text"><small>Pulau Mentawai - Sumbar</small></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;display: inline-block;border-radius: 10px;">
+                    <img class="card-img-top bRadius"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGK_hk-H-Z5-bsz-KJW9zsYeJPRbnbCI7c5A&usqp=CAU"
+                        alt="Card image cap">
+                    <div class="card-body text-white" style="background-color: #68bd45;">
+                        <p class="card-text"><small>Raja Ampat - Papua</small></p>
+                    </div>
+                </div>
+                <h1 class="text-muted" style="opacity: 0.2;">Hacktivacation</h1>
+            </div>
+        </div>
+    </div>
+    <section id="data">
+        <div class="place">
+            <img src="./_Assets/travel.png" alt="" id="decorationImg">
+    
+            <div class="container">
+                <h1 class="text-white">Become A Travel Pro in</h1>
+                <h1 class="text-white">One Easy Lesson</h1>
+                <div class="row" style="margin-top: 50px;">
+                    <a class="col photo"  onclick="move('Mentawai')">
+                        <img src="https://i.pinimg.com/originals/46/7f/fe/467ffedf6f9f9cdbd767054c25973f40.jpg" alt="">
+                        <div class="boxText" >
+                            <p><i class="bi bi-geo-alt-fill"></i>Mentawai - Sumatera Barat</p>
+                            <br>
+                        </div>
+                        
+                    </a>
+                    <a class="col photo" onclick="move('Raja Ampat')" >
+                        <img src="https://wisato.id/wp-content/uploads/2019/02/kolam-sisir.png" alt="">
+                        <div class="boxText" >
+                            <p><i class="bi bi-geo-alt-fill"></i> Raja Ampat - Papua Barat</p>
+                        </div>
+                    </a>
+                    <a class="col photo" onclick="move('Sumba Timur')">
+                        <img src="https://wallpapershome.com/images/wallpapers/danau-toba-1440x2560-4k-hd-wallpaper-indonesia-sailing-ship-rocks-sea-1044.jpg"
+                            alt="">
+                            <div class="boxText" >
+                                <p><i class="bi bi-geo-alt-fill"></i>Sumba Timur - NTT</p>
+                            </div>
+                    </a>
+                    <a class="col photo" onclick="move('Kaimana')">
+                        <img src="https://images.unsplash.com/photo-1531778272849-d1dd22444c06?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGJhbGl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+                            alt="">
+                            <div class="boxText" >
+                                <p><i class="bi bi-geo-alt-fill"></i>Kaimana - Papua Barat</p>
+                            </div>
+                    </a>
+                </div>
+                <br><br>
+                <div class="row" style="margin-bottom: 100px; margin-top: 40px;">
+                    <a class="col photo" onclick="move('Overland Flores')">
+                        <img src="https://i.pinimg.com/originals/46/7f/fe/467ffedf6f9f9cdbd767054c25973f40.jpg" alt="">
+                        <div class="boxText" >
+                            <p><i class="bi bi-geo-alt-fill"></i>Overland Flores - NTT</p>
+                        </div>
+                    </a>
+                    <a class="col photo" onclick="move()">
+                        <img src="https://wisato.id/wp-content/uploads/2019/02/kolam-sisir.png" alt="">
+                        <div class="boxText" >
+                            <p><i class="bi bi-geo-alt-fill"></i> Bali - ujung batu</p>
+                        </div>
+                    </a>
+                    <a class="col photo" onclick="move()">
+                        <img src="https://wallpapershome.com/images/wallpapers/danau-toba-1440x2560-4k-hd-wallpaper-indonesia-sailing-ship-rocks-sea-1044.jpg"
+                            alt="">
+                            <div class="boxText" >
+                                <p><i class="bi bi-geo-alt-fill"></i> Bali - ujung batu</p>
+                            </div>
+                    </a>
+                    <a class="col photo" onclick="move()">
+                        <img src="https://images.unsplash.com/photo-1531778272849-d1dd22444c06?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGJhbGl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+                            alt="">
+                            <div class="boxText" >
+                                <p><i class="bi bi-geo-alt-fill"></i> Bali - ujung batu</p>
+                            </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <div id="ourPartner">
+        <div class="container">
+            <h1>our Network</h1>
+            <ul>
+                <li>
+                    <div class="networkImg">
+                        <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQF8H0ymLxDgeA/company-logo_200_200/0/1601967650318?e=2159024400&v=beta&t=0JdmXAA74tPNMgH-fQwsgIQz2YVeMgBhXxlHT2U2wH8"
+                            alt="" width="100%">
+                    </div>
+                </li>
+                <li>
+                    <div class="networkImg">
+                        <img src="https://ratushima567.files.wordpress.com/2014/02/logo-kemenparekraf.png" alt=""
+                            width="100%">
+                    </div>
+                </li>
+                <li>
+                    <div class="networkImg">
+                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/11/22/69332220-67df-44d5-a17f-bf3fe08bc0b0_169.png?w=780&q=90"
+                            alt="" width="100%" style="margin-top: 40px;">
+                    </div>
+                </li>
+                <li>
+                    <div class="networkImg">
+                        <img src="http://m.ayosemarang.com/images-semarang/post/articles/2019/07/17/40779/garuda_indonesia.png"
+                            alt="" width="100%" style="margin-top: 45px;">
+                    </div>
+                </li>
+                <li>
+                    <div class="networkImg">
+                        <img src="https://static.wikia.nocookie.net/logopedia/images/3/3d/Gen_fm_id.png" alt=""
+                            width="100%" style="margin-top: 45px;">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-6">
+                    <h5>Hacktivacation.com</h5>
+                    <p class="text-muted">jln . Arteri no 2 - 3 Pondok Indah</p>
+                    <p class="text-muted">Jakarta Selatan</p>
+                </div>
+                <div class="col-6">
+                    <h5>&copy; Group 3 Fase 0 <small><em>development</em></small></h5>
+                    <p>we fight for our tumbler</p>
+                    <p>#KAWALTERUSTUMBLERKITA</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

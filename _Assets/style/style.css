@@ -1,0 +1,208 @@
+*{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: poppins;
+}
+
+#banner {
+    min-width: 100%;
+    min-height: 100vh;
+    background : url('../bgMain.jpg');
+
+    background-size: cover;
+}
+/* background-image: url(https://www.radoriza.com/wp-content/uploads/2019/02/pantai-nihiwatu-sumba.jpg); */
+#banner .bannerBox {
+    position: relative;
+    top: 100px;
+}
+#banner .bannerBox h1 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#logoImg {
+    margin-bottom: 50px;
+}
+
+#destination {
+    min-width: 100%;
+    min-height: 500px;
+}
+
+
+#destination #promo{
+    margin-top: 50px;
+}
+
+#destination #promo h3{
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+#destination #promo p {
+    line-height: 5px;
+}
+.bRadius {
+    border-radius: 10px 10px 0 0!important;
+    max-height: 120px;
+}
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.startHere {
+    margin-top: 40px;
+}
+
+#sideBanner {
+    position: relative;
+    top: 350px;
+    min-width: 300px;
+    min-height: 500px;
+    background: url('https://i.pinimg.com/originals/9e/68/95/9e689581a983e3292f52ceb304d436fb.jpg');
+    background-size: cover;
+    box-shadow: 1px 3px 35px black;
+    position: relative;
+}
+
+#sideBanner .boxSide {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+}
+
+.fs16 {
+    font-size: 16px;
+}
+
+.boxText {
+    position: absolute;
+    background: white;
+    bottom: 20px;
+    left: 20px;
+    padding: 0px 10px;
+    height: 27px;
+    border-radius: 2px;
+}
+
+.place {
+    min-height: 700px;
+    /* background-color: lavender; */
+    background: url('../laut.jpg');
+    /* background: url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80'); */
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 90px 0;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.photo {
+    max-height: 400px;
+    margin: 10px;
+    height: 250px;
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 0px;
+    /* box-shadow: 2px 12px 45px black; */
+    position: relative;
+    transition: 0.2s;
+}
+ .photo:hover {
+    filter: drop-shadow(5px 5px 10px blue);
+}
+.photo img {
+    width: 100%;
+    height: 400px;
+}
+
+#decorationImg {
+    position: absolute;
+    top: 0px;
+    right: -100px;
+    /* left: -10px; */
+    width: 50%;
+    z-index: -10;
+    /* opacity: 0.3; */
+}
+
+#ourPartner {
+    min-width: 100%;
+    min-height: 300px;
+    background-color: white;
+    padding: 70px 0;
+}
+#ourPartner ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#ourPartner ul li .networkImg{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+footer {
+    min-width: 100%;
+    min-height: 150px;
+    background-color: black;
+    padding: 70px 0;
+}
+
+footer h5 {
+    margin-bottom: 40px;
+}
+
+footer p {
+    line-height: 5px;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+  

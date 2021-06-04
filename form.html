@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./otherStyle.css">
+    <title>Form</title>
+    <style>
+        body {
+            background-image: url("./_Assets/shortBG.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- form -->
+    <section class="form">
+        <form class="row g-3" onsubmit="send()">
+            <img src="./_Assets/1.png" alt="">
+            <div class="input-group input-group-sm mb-3">
+                <!-- <div class="col-md-12">
+          <label for="inputName" class="form-label" ><p class="fw-bold">Name</p></label>
+          <input type="text" class="form-control" id="inputName">
+        </div> -->
+                <div id="loop" class="row">
+
+                </div>
+                <!-- <div class="col-md-12">
+          <label for="inputGroupName" class="form-label" class="fw-bold"><p class="fw-bold">Group Name</p></label>
+          <input type="text" class="form-control" id="inputGroupName">
+        </div> -->
+
+                <div class="col-md-12">
+                    <label for="inputDate" class="form-label" class="fw-bold">
+                        <p class="fw-bold">Date</p>
+                    </label>
+                    <input type="datetime-local" class="form-control" id="inputDate">
+                </div>
+                <div class="col-md-12 mt-2">
+                    <label>Daerah Asal</label>
+                    <select class="form-control" id="Departure">
+                        <option>--- Daerah Asal ---</option>
+                        <option value="Medan">Medan</option>
+                        <option value="Padang">Padang</option>
+                        <option value="Sumatera Barat">Sumatera Barat</option>
+                        <option value="Lampung">Lampung</option>
+                        <option value="Pontianak">Pontianak</option>
+                        <option value="Jakarta">Jakarta</option>
+                        <option value="Bandung">Bandung</option>
+                        <option value="Semarang">Semarang</option>
+                        <option value="Yogyakarta">Yogyakarta</option>
+                        <option value="Surabaya">Surabaya</option>
+                        <option value="Manado">Manado</option>
+                        <option value="Makassar">Makassar</option>
+                        <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                        <option value="Maluku">Maluku</option>
+                        <option value="Papua Barat">Papua Barat</option>
+                    </select>
+                </div>
+                <div class="col-md-12 mt-2">Nomor HP
+                    <input type="number" class="form-control" id="inputHp" placeholder="nomor hp yang akan di hubungi">
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-warning" class="fw-bold">
+                        <p class="fw-bold">Booking</p>
+                    </button>
+                    
+                        <button type="button" class="btn" style="background-color: lavender;" class="fw-bold" onclick="back()">
+                            <p  style="color: #111;">CANCEL</p>
+                        </button>
+                    
+                </div>
+            </div>
+        </form>
+    </section>
+    <!-- form -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+    <script>
+        let tmp = '';
+        let choosed = localStorage.getItem('place');
+        let depart = document.getElementById('Departure').value;
+        // alert(depart);
+        let data = {
+            custName: 'Imam Muttaqin', //customer name
+            region: 'Bandung',
+            choice: choosed,
+            numberOfGroupMember: Number(localStorage.getItem('key')),
+            groupList: [],
+            dateOfDeparture: '21-Jun-2021',
+            }
+        let nama = [];
+        for(let j = 0; j < data.numberOfGroupMember; j++){
+            nama.push(document.getElementById(`inputName${j+1}`))
+        }
+        console.log(nama)
+        let myFunc = () => {
+            let getItem = Number(localStorage.getItem('key'))
+            for (let i = 0; i < getItem ; i++) {
+
+                tmp += `
+                <div class="col-md-12">
+                    <label for="inputName" class="form-label" ><p class="fw-bold">Name ${i + 1}</p></label>
+                    <input type="text" class="form-control" id="inputName${i+1}">
+                </div><br/>
+                
+                `
+
+            }
+            localStorage.clear()
+            return tmp
+        }
+
+        document.getElementById('loop').innerHTML = myFunc()
+
+        let back = () => {
+            window.location.href = "index.html"
+        }
+        
+        let ikan = [];
+        let send = () => {
+            for(let j = 0; j < data.numberOfGroupMember; j++){
+                ikan.push(document.getElementById(`inputName${j+1}`))
+            }
+            console.log(document.getElementById(`inputName${j+1}`).value)
+        }
+    </script>
+</body>
+
+</html>

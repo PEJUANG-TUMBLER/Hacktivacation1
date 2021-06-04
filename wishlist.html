@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wishList</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./_Assets/style/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <style>
+        body {
+            /* background-color: lavender; */
+            background: url(./_Assets/logo.jpg);
+            background-size: cover;
+            background-position: 0px -30px;
+            
+        }
+        #explanations {
+            margin-top: 40px;
+        }
+
+        .btnNext {
+            margin-top: 40px;
+            width: 60%;
+        }
+        .boxTotal {
+            background-color: #e1e0ee;
+            padding: 20px 40px;
+            border-radius: 10px;
+            position: relative;
+            top: 50px;
+            border: 2px solid #0d6efd;
+            opacity: 0.8;
+        }
+        .boxTotal h4{
+            margin-bottom: 30px;
+        }
+        .boxTotal p {
+            line-height: 5px;
+        }
+        .c {
+            text-align: center;
+        }
+        tr td {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6">
+                <h1 class="text-white">WISH LIST BOOK</h1>
+            </div>
+            <div class="col-6" style="text-align: right;">
+                <a href="index.html"><button class="btn btn-primary">KEMBALI</button></a>
+            </div>
+        </div>
+        <p class="text-muted">Hacktivacation.com</p>
+        <table class="table table-bordered">
+            <thead style="background-color: white;">
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Tujuan</th>
+                    <th scope="col" class="c">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td class="c"><a href=""><button class="btn btn-sm btn-warning text-white "><i class="bi bi-pencil-square"></i>
+                                UPDATE</button></a> <a href=""><button class="btn btn-sm btn-danger"><i
+                                    class="bi bi-trash-fill"></i> DELETE</button></a></td>
+                </tr>
+                <tr>
+                    <td scope="row">2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td class="c"><a href=""><button class="btn btn-sm btn-warning text-white"><i class="bi bi-pencil-square"></i>
+                                UPDATE</button></a> <a href=""><button class="btn btn-sm btn-danger"><i
+                                    class="bi bi-trash-fill"></i> DELETE</button></a></td>
+                </tr>
+                <tr>
+                    <td scope="row">3</td>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                    <td class="c"><a href=""><button class="btn btn-sm btn-warning text-white"><i class="bi bi-pencil-square"></i>
+                                UPDATE</button></a> <a href=""><button class="btn btn-sm btn-danger"><i
+                                    class="bi bi-trash-fill"></i> DELETE</button></a></td>
+
+                </tr>
+            </tbody>
+        </table>
+        <div class="row" id="explanations">
+            <div class="col-6">
+                <section>
+                    <h6 class="text-white">Pemberitahuan</h6>
+                    <br>
+                    <ol>
+                        <li class="text-white">pastikan anda melakukan perubahan sebelum menekan tombol lanjutkan</li>
+                        <li class="text-white">jika data anda sudah benar , pergi ke tombol lanjutkan</li>
+                        <li class="text-white">download dan cetak invoice</li>
+                        <li class="text-white">kirimkan bukti transfer anda ke nomor yang tertera di invoice</li>
+                        <li class="text-white">tahap terakhir kami akan menghubungi anda melalui nomor yang anda daftarkan di sistem</li>
+                    </ol>
+                    <button class="btn btn-primary btnNext">L A N J U T K A N</button>
+                </section>
+            </div>
+            <div class="col-6">
+                <div class="boxTotal">
+                    <h4>Rincian perjalanan</h4>
+                    <p>Jumlah pemohon : 0</p>
+                    <p>Penanggung Jawab perjalanan : ''</p>
+                    <p>Kota Tujuan</p>
+                    <p>asal keberangkatan</p>
+                    <p>durasi paket</p>
+                    <p>harga</p>
+                    <p>tour guide PJ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
