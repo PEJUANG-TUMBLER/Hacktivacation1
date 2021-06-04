@@ -73,35 +73,11 @@
                     <th scope="col" class="c">Action</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td scope="row">1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td class="c"><a href=""><button class="btn btn-sm btn-warning text-white "><i class="bi bi-pencil-square"></i>
-                                UPDATE</button></a> <a href=""><button class="btn btn-sm btn-danger"><i
-                                    class="bi bi-trash-fill"></i> DELETE</button></a></td>
-                </tr>
-                <tr>
-                    <td scope="row">2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td class="c"><a href=""><button class="btn btn-sm btn-warning text-white"><i class="bi bi-pencil-square"></i>
-                                UPDATE</button></a> <a href=""><button class="btn btn-sm btn-danger"><i
-                                    class="bi bi-trash-fill"></i> DELETE</button></a></td>
-                </tr>
-                <tr>
-                    <td scope="row">3</td>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td class="c"><a href=""><button class="btn btn-sm btn-warning text-white"><i class="bi bi-pencil-square"></i>
-                                UPDATE</button></a> <a href=""><button class="btn btn-sm btn-danger"><i
-                                    class="bi bi-trash-fill"></i> DELETE</button></a></td>
-
-                </tr>
+            <tbody id="cetak">
+                
             </tbody>
         </table>
-        <div class="row" id="explanations">
+        <div class="row" id="explanations" style="margin-bottom: 100px;">
             <div class="col-6">
                 <section>
                     <h6 class="text-white">Pemberitahuan</h6>
@@ -113,23 +89,128 @@
                         <li class="text-white">kirimkan bukti transfer anda ke nomor yang tertera di invoice</li>
                         <li class="text-white">tahap terakhir kami akan menghubungi anda melalui nomor yang anda daftarkan di sistem</li>
                     </ol>
-                    <button class="btn btn-primary btnNext">L A N J U T K A N</button>
+                    <button class="btn btn-success btnNext" onclick="output()">L A N J U T K A N</button>
                 </section>
             </div>
             <div class="col-6">
-                <div class="boxTotal">
-                    <h4>Rincian perjalanan</h4>
-                    <p>Jumlah pemohon : 0</p>
-                    <p>Penanggung Jawab perjalanan : ''</p>
-                    <p>Kota Tujuan</p>
-                    <p>asal keberangkatan</p>
-                    <p>durasi paket</p>
-                    <p>harga</p>
-                    <p>tour guide PJ</p>
+                <div class="boxTotal" id="total">
+                    
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        let getName = localStorage.getItem('payloadName')
+
+        let basket = ''
+        let arrName = []
+        getName += ','
+        for (let a = 0; a < getName.length; a++) {
+
+            if (getName[a] === ','){
+                arrName.push(basket)
+                basket = ''
+            } else {
+                basket += getName[a]
+            }
+            
+        }
+
+
+
+
+        let getRegion = localStorage.getItem('payloadRegion')
+        let getTime = localStorage.getItem('payloadTime')
+        let gethp = localStorage.getItem('payloadHP')
+        let getChoice = localStorage.getItem('payloadChoice')
+        let getSumperson = localStorage.getItem('payloadSumperson')
+        // console.log(arrName)
+        // console.log(getRegion)
+        // console.log(getTime)
+        // console.log(getChoice)
+        // console.log(gethp)
+        // console.log(getSumperson)
+
+        let newPayload = {
+                custName: arrName[0], //customer name
+                region: getRegion,
+                timetoFly: getTime,
+                choice: getChoice,
+                numberOfGroupMember: getSumperson,
+                groupList: arrName,
+                hp: gethp
+            }
+
+            console.log(newPayload)
+
+        localStorage.clear()
+
+        let myFunc2 = () => {
+            getItem = Number(localStorage.getItem('key'))
+            let tmp = ''
+            for (let i = 0; i < getSumperson; i++) {
+
+                tmp += `
+                <tr>
+                    <td scope="row">${i + 1}</td>
+                    <td>${arrName[i]}</td>
+                    <td>${getChoice}</td>
+                    <td class="c"><a href="#"><button class="btn btn-sm btn-warning text-white "><i class="bi bi-pencil-square"></i>
+                                UPDATE</button></a> <a href=""><button class="btn btn-sm btn-danger" type="button" onclick="Del()"><i
+                                    class="bi bi-trash-fill"></i> DELETE</button></a></td>
+                </tr>
+                
+                `
+
+            }
+            console.log(tmp)
+            return tmp
+        }
+
+        document.getElementById('cetak').innerHTML = myFunc2()
+
+        let tmp2 = ''
+        let printRincian = () => {
+            tmp2 += `
+                    <h4>Rincian perjalanan</h4>
+                    <p>Jumlah pemohon : ${newPayload.numberOfGroupMember}</p>
+                    <p>Penanggung Jawab perjalanan : ${newPayload.custName}</p>
+                    <p>Kota Tujuan : ${newPayload.choice}</p>
+                    <p>asal keberangkatan : ${newPayload.region}</p>
+                    <p>durasi paket : 4 Hari 3 malam</p>
+                    <p>harga : 300000</p>
+                    <p>tour guide PJ : 'Staff cabang terdekat'</p>
+            `
+
+            return tmp2
+        }
+
+        document.getElementById('total').innerHTML = printRincian()
+
+        let output = () => {
+            window.print()
+            window.location.href = "result.html"
+        }
+
+        let Del = (e) => {
+            let ask = confirm('apakah anda ingin menghapus data ini ?')
+            // alert(id)
+            if (ask){
+                // alert(id)
+                arrName.pop()
+                getSumperson -= 1
+                document.getElementById('cetak').innerHTML = ''
+                document.getElementById('cetak').innerHTML = myFunc2()
+                
+                event.preventDefault();
+
+            } else {
+                event.preventDefault();
+            }
+        
+        }
+        
+    </script>
 </body>
 
 </html>

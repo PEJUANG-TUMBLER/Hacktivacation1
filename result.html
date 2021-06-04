@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container mt-5">
+        <form action="">
+            <h1 class="mb-5">Unggah Bukti transfer</h1>
+            <input type="file" class="form-control">
+            <button class="btn btn-primary mt-5" onclick="notif()" type="button">KIRIM</button>
+        </form>
+    </div>
+
+    <script>
+        let notif = () => {
+            alert('Terimakasih , kami akan menghubungi anda segera')
+            window.location.href = "index.html"
+        }
+    </script>
+</body>
+</html>

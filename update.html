@@ -23,6 +23,7 @@
 <body>
 
     <!-- form -->
+    <h1>UPDATE</h1>
     <section class="form" >
         <form class="row g-3">
             <img src="./_Assets/1.png" alt="">
@@ -153,12 +154,10 @@
         let date = ''
         let hp = ''
         let send = () => {
-            
-            date = document.getElementById('inputDate').value
-                        
             hp = document.getElementById('inputHp').value
             asalDaerah = document.getElementById('Departure').value
-            
+            date = document.getElementById('inputDate').value
+
             for (let j = 0; j < getItem ; j++) {
                 let user = document.getElementById(`inputName${j + 1}`).value
                 nameDB.push(user)    
